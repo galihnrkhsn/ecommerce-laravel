@@ -12,14 +12,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         Admin::create([
-            'email' => 'admin@example.com',
+            'email' => 'admin@gmail.com',
             'password' => Hash::make('admin123'),
         ]);
 
         User::create([
             'nm_pelanggan' => 'User Demo',
             'username' => 'userdemo',
-            'email' => 'user@example.com',
+            'email' => 'user@gmail.com',
             'password' => Hash::make('user123'),
         ]);
         $this->call(KategoriSeeder::class);
