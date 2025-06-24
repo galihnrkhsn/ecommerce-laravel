@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+}
+
+.hero {
+    background: url('../img/tele.jpg') no-repeat center center / cover;
+    padding: 120px 40px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* overlay */
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-text p {
+    font-size: 18px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-init {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.highlight {
+    background: #f7f7f7;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.highlight h2 {
+    margin-bottom: 10px;
+}
+
+.blue {
+    color: #007bff;
+}
+
+.produk-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 0;
+}
+
+.produk-card {
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.kategori-populer {
+    background: url('../img/bg-pola.png') no-repeat center center / cover;
+    color: white;
+    padding: 50px 20px;
+}
+
+.kategori-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.kategori-item {
+    width: 200px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.kategori-item img {
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.footer {
+    background: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    margin-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin: 4px 0;
+}
