@@ -100,6 +100,9 @@
                     <a href="{{ route('admin.produk') }}" class="nav-link">🛒 Produk</a>
                 </li>
                 <li class="nav-item mb-2">
+                    <a href="{{ route('admin.kategori') }}" class="nav-link">📑 Kategori</a>
+                </li>
+                <li class="nav-item mb-2">
                     <a href="{{ route('admin.users') }}" class="nav-link">👥 User</a>
                 </li>
                 <li class="nav-item mb-2">
@@ -126,7 +129,11 @@
 
             <!-- Page Content -->
             <div class="container-fluid">
-                @yield('content')
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        @yield('content')
+                    </div>
+                </div>
             </div>
         </div>
     </div>

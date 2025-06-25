@@ -27,6 +27,12 @@ class KategoriProdukController extends Controller
 
         KategoriProduk::create($request->all());
 
-        return redirect()->route('kategori-produk.index')->with('success', 'Kategori berhasil ditambahkan!');
+        return redirect()->route('admin.kategori')->with('success', 'Kategori berhasil ditambahkan!');
+    }
+
+    public function destroy($id)
+    {
+        KategoriProduk::destroy($id);
+        return redirect()->back()->with('success', 'Kategori berhasil dihapus.');
     }
 }
