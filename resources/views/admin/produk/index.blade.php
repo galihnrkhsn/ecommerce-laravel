@@ -30,12 +30,12 @@
                             <td>Rp {{ number_format($p->harga) }}</td>
                             <td>{{ $p->stok }}</td>
                             <td>
-                                <a href="{{ route('admin.edit', $p->id_produk) }}" class="btn btn-sm btn-warning me-1">Edit</a>
+                                <a href="{{ route('admin.edit', $p->id_produk) }}" class="btn btn-sm btn-warning me-1"><i class="bi bi-pencil"></i></a>
 
                                 <form action="{{ route('admin.destroy', $p->id_produk) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Yakin ingin menghapus produk ini?');">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                                    <button type="submit" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
                                 </form>
                             </td>
                         </tr>

@@ -26,7 +26,7 @@
             {{-- Loop produk --}}
             @foreach ($produk as $item)
                 <div class="produk-card">
-                    <img src="{{ asset('img/tv.png') }}" alt="produk">
+                    <img src="{{ asset('img/produk/' . $item->gambar) }}" alt="{{ $item->nm_produk }}" style="wid">
                     <h4>{{ $item->nm_produk }}</h4>
                     <p>Rp {{ number_format($item->harga) }}</p>
                 </div>
@@ -40,45 +40,10 @@
         <div class="kategori-list">
             @foreach ($category as $cate)
                 <div class="produk-card">
-                    <img src="{{ asset('img/tv.png') }}" alt="produk">
+                    <img src="{{ $cate->icon ? asset('img/icon/' . $cate->icon) : asset('img/icon/default.png') }}" alt="{{ $cate->nm_kategori }}" style="width: 60px; height: 60px; object-fit: contain;">
                     <h4 style="color: black; margin-top: 2px;">{{ $cate->nm_kategori }}</h4>
                 </div>
             @endforeach
         </div>
     </section>
-
-    {{-- Footer --}}
-    <footer class="footer">
-        <div class="footer-col">
-            <h4>ABOUT US</h4>
-            <p>Electronicsmart is a website that sells a variety of good quality furniture or household appliances.</p>
-            <p>
-                <a href="#">IG</a> • <a href="#">FB</a> • <a href="#">Twitter</a>
-            </p>
-        </div>
-        <div class="footer-col">
-            <h4>CUSTOMER SERVICE</h4>
-            <ul>
-                <li>Contact Us</li>
-                <li>Ordering & Payment</li>
-                <li>Delivery</li>
-                <li>Return</li>
-                <li>FAQ</li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>INFORMATION</h4>
-            <ul>
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li>Press</li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>CONTACT US</h4>
-            <p>0821 8142 8888</p>
-            <p>Electronicsmart@gmail.com</p>
-            <p>Jl. Buahbatu 800</p>
-        </div>
-    </footer>
 @endsection

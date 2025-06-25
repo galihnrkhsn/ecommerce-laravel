@@ -83,7 +83,7 @@
                             $bukti = \App\Models\Pembayaran::where('id_order', $order->id_order)->first();
                         @endphp
                         @if ($bukti)
-                            <a href="{{ asset('storage/' . $bukti->bukti_transfer) }}" target="_blank">Lihat Bukti</a>
+                            <a href="{{ asset($bukti->bukti_transfer) }}" target="_blank">Lihat Bukti</a>
                         @else
                             <span class="text-danger">Tidak ada</span>
                         @endif

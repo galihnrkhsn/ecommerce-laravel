@@ -15,6 +15,10 @@ class LandingController extends Controller
         return view('user.index', compact('produk', 'category'));
     }
 
+    public function about() {
+        return view('user.about');
+    }
+
     public function shop()
     {
         $produk = Produk::all();

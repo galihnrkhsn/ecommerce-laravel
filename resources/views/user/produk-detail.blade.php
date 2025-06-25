@@ -109,7 +109,7 @@
 <div class="detail-container">
     <div class="detail-image">
         @if ($produk->gambar)
-            <img src="{{ asset('storage/' . $produk->gambar) }}" alt="{{ $produk->nm_produk }}">
+            <img src="{{ asset('img/produk/' . $produk->gambar) }}" alt="{{ $produk->nm_produk }}">
         @else
             <img src="https://via.placeholder.com/400x300?text=No+Image" alt="No Image">
         @endif

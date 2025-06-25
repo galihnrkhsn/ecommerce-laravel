@@ -111,7 +111,7 @@
 
         <div class="form-group">
             <label for="jumlah_transfer">Jumlah Transfer</label>
-            <input type="number" name="jumlah_transfer" id="jumlah_transfer" value="{{ $order->total_order }}" disabled required>
+            <input type="number" name="jumlah_transfer" id="jumlah_transfer" value="{{ $order->total_order }}" readonly required>
         </div>
 
         <div class="form-group">

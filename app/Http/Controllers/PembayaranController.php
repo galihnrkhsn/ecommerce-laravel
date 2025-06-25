@@ -31,12 +31,9 @@ class PembayaranController extends Controller
             'bukti_transfer' => 'required|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
-        if ($request->hasFile('bukti_transfer')) {
-            $filename = time() . '.' . $request->bukti_transfer->extension();
-            $request->bukti_transfer->move(public_path('img/bukti-transfer'), $filename);
-            $file   = 'img/bukto-transfer/' . $filename;
-        }
-
+        $filename = time() . '.' . $request->bukti_transfer->extension();
+        $request->bukti_transfer->move(public_path('img/bukti-transfer'), $filename);
+        $file   = 'img/bukti-transfer/' . $filename;
 
         Pembayaran::create([
             'id_order' => $id_order,

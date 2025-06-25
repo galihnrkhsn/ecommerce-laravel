@@ -114,7 +114,7 @@
                 @foreach ($kategori->produk as $p)
                     <div class="produk-card" data-nama="{{ strtolower($p->nm_produk) }}">
                         @if ($p->gambar)
-                            <img src="{{ asset('storage/' . $p->gambar) }}" alt="{{ $p->nm_produk }}">
+                            <img src="{{ asset('img/produk/' . $p->gambar) }}" alt="{{ $p->nm_produk }}">
                         @else
                             <img src="https://via.placeholder.com/300x200?text=No+Image" alt="No Image">
                         @endif

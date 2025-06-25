@@ -56,7 +56,7 @@
     <div class="navbar">
         <div class="left">
             <a href="/">
-                <img src="{{ asset('img/logo.png') }}" alt="Logo">
+                <img src="{{ asset('img/icon/Tinic.png') }}" alt="Logo">
             </a>
         </div>
 
@@ -65,8 +65,8 @@
             <a href="#">Gallery</a>
             <a href="#">Blog</a>
             <a href="/shop">Shop</a>
-            <a href="/order">Order</a>
-            <a href="#">About</a>
+            <a href="{{ route('user.order') }}">Order</a>
+            <a href="{{ route('user.about') }}">About</a>
             <a href="#">Contact</a>
         </div>
 
@@ -88,28 +88,62 @@
     <div class="container">
         @yield('content')
     </div>
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const faders = document.querySelectorAll('.fade-scroll');
+        {{-- Footer --}}
+    <footer class="footer">
+        <div class="footer-col">
+            <h4>ABOUT US</h4>
+            <p>Electronicsmart is a website that sells a variety of good quality furniture or household appliances.</p>
+            <p>
+                <a href="#">IG</a> • <a href="#">FB</a> • <a href="#">Twitter</a>
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>CUSTOMER SERVICE</h4>
+            <ul>
+                <li>Contact Us</li>
+                <li>Ordering & Payment</li>
+                <li>Delivery</li>
+                <li>Return</li>
+                <li>FAQ</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>INFORMATION</h4>
+            <ul>
+                <li>Privacy</li>
+                <li>Terms</li>
+                <li>Press</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>CONTACT US</h4>
+            <p>0821 8142 8888</p>
+            <p>Electronicsmart@gmail.com</p>
+            <p>Jl. Buahbatu 800</p>
+        </div>
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const faders = document.querySelectorAll('.fade-scroll');
 
-    const options = {
-        threshold: 0.3
-    };
+        const options = {
+            threshold: 0.3
+        };
 
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
 
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            });
+        }, options);
+
+        faders.forEach(el => {
+            el.classList.add('fade-init');
+            appearOnScroll.observe(el);
         });
-    }, options);
-
-    faders.forEach(el => {
-        el.classList.add('fade-init');
-        appearOnScroll.observe(el);
     });
-});
 </script>
 
 

@@ -5,7 +5,7 @@
 @section('content')
     <h4>Tambah Produk</h4>
 
-    <form method="POST" action="{{ route('admin.store') }}">
+    <form method="POST" action="{{ route('admin.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="mb-2">
             <label>Kategori</label>
@@ -30,6 +30,10 @@
         <div class="mb-2">
             <label>Stok</label>
             <input type="number" name="stok" class="form-control" required>
+        </div>
+        <div class="mb-2">
+            <label>Foto</label>
+            <input type="file" name="gambar" class="form-control" required>
         </div>
         <div class="mb-2">
             <label>Deskripsi</label>
